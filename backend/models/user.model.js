@@ -24,6 +24,11 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: Date.now, // Set the default value to the current date and time
     },
+    avator: {
+      type: String,
+      default:
+        "https://images.pexels.com/photos/20441505/pexels-photo-20441505/free-photo-of-crouching-by-wall-woman-in-trench-coat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
   },
   {
     timestamps: true,

@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import NavBar from "./components/NavBar";
 import SignUp from "./pages/SignUp";
 import { BrowserRouter as Router } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
   return (
@@ -20,7 +21,9 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/logout" element={<LogOut />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/profile" element={<Profile />} />
+          </Route>
         </Routes>
       </Router>
     </div>
